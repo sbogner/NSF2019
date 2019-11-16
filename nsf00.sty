@@ -1,0 +1,43 @@
+% load citation package and options
+\usepackage[square,comma,sort&compress]{natbib}
+
+% uncomment for indented paragraphs after section headings
+\usepackage{indentfirst}
+
+% set up paper size
+\setlength{\textwidth}{16.59cm}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\textheight}{22.94cm}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\oddsidemargin}{-0.04cm}
+\setlength{\topmargin}{-.04cm}
+%\setlength{\parindent}{3.0em}
+%\setlength{\parsep}{0pt}
+
+% may need to fine-tune this!
+\renewcommand{\baselinestretch}{1.1}
+
+%\newcommand{\sectskip}{$\!\!\!$}
+\newcommand{\sectskip}{}
+
+% some adjustments in the style
+\renewcommand\thesection       {\Alph{section}.\sectskip}
+ %\renewcommand\thesection       {\arabic{section}}
+ %\renewcommand\thesection       {\Roman{section}}
+\renewcommand\thesubsection    {\arabic{subsection}.\sectskip}
+ %\renewcommand\thesubsection    {\Alph{subsection}}
+\renewcommand\thesubsubsection {\alph{subsubsection}.\sectskip}
+
+\renewcommand{\thepage}{{\Alph{section}--\arabic{page}}}
+
+\renewcommand{\refname}{\vspace*{-\baselineskip}}
+
+\newcounter{listnumber}
+\newenvironment{numberedlist}{\begin{list}{\arabic{listnumber}.}{%
+      \usecounter{listnumber}%
+      \addtolength{\itemsep}{-6pt}%
+      \addtolength{\leftmargin}{-10pt}%
+      }}
+  {\end{list}}

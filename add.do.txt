@@ -1,0 +1,224 @@
+# #ifdef LATEX2DOCONCE
+This is the result of the doconce latex2doconce program.
+The translation from LaTeX is just a helper. The text must
+be carefully examined! (Be prepared that some text might also
+be lost in the translation - in seldom cases.)
+
+
+## search for CHECK to see if auto editing was correct
+
+# #endif
+# %%   Important note: think of a good write of the educational plan, that
+# %is our plans fro training. Now it says nothing
+===== Proposed Research =====
+
+In this section, we describe the detailed components of our proposed research that was 
+outlined in the Overview section.
+
+
+# An important  objective of this application is thus to develop a modeling framework with respect
+# to theory, methods, and implementation including applications to
+# various phenomenologies. The aim is to extend several of these methods
+# to develop predictive and robust first principles approaches for
+# nuclear systems of relevance for the scientific goals of the
+# low-energy program. The developed software will be easily
+# maintainable, tailored for modern high-performance computing
+# environment, and incorporated in the software library discussed in
+# subsection ref{subsec:library}.
+# The theory will also include proper error quantifications, both at the
+# level of the many-body methods and what concerns the parameters of the
+# nuclear Hamiltonians.
+
+
+# Finally, these developments will be included in a modern software package which can
+# be used by other theorists and experimentalists.
+
+# Our research program is detailed in subsections ref{subsec:finitenuclei}-ref{subsec:library}.
+
+
+
+=== *Ab initio* calculations of Finite Nuclei} label{subsec:finitenuclei ===
+
+The sub-projects in this subsection concern the development of
+*ab initio* methods to calculate ground- and excited-state properties of
+medium mass nuclei. The methods we will focus on are the in-medium
+similarity renormalization group (IM-SRG), many-body perturbation
+theory (MBPT), coupled-cluster (CC) theory, and full configuration interaction
+quantum Monte Carlo methods (FCIQMC). Emphasis will be placed on
+developing reliable *ab initio* calculations for both closed- and
+open-shell nuclei, with the proper inclusion of NNN forces and
+continuum degrees of freedom.  Ultimately, these methods will be used
+to derive microscopically based shell-model hamiltonians and effective
+operators and nuclear energy density functionals.
+
+
+
+  * _Inclusion of NNN forces and three-body correlations in finite nuclei calculations._  An important challenge for nuclear many-body theory is the   accurate inclusion of NNN forces, as well as three-body (and higher)   correlations to accurately compute energies and   spectroscopic observables for nuclei. The optimized chiral NN   and NNN forces discussed in subsection ref{subsec:uncertainties}   will be implemented in IM-SRG, MBPT, and CC calculations to study   ground and excited state properties of nuclei. In much the same way   that NN interactions imply that doubles excitations ($2p2h$,   disconnected $4p4h$, etc.) must be included for an accurate   description of many-body correlations, the presence of NNN forces   demands an explicit treatment of triples excitations in the   many-body framework. Therefore, we will develop computationally    feasible schemes for including explicit   three-body correlations (e.g., $3p3h$-excitations) when NNN forces   are present. In terms of CC and IM-SRG methods, this corresponds to   a non-iterative triples (e.g., CCSD(T)) or approximate IM-SRG(3)   calculation. This sub-project is tightly linked with the scheme   outlined in subsection ref{subsec:uncertainties}, where one of the   aims is to use medium mass nuclei and nuclear matter properties to   constrain the optimization of couplings in chiral NN and NNN forces.
+
+  * _Microscopic theory of shell model Hamiltonians and effective operators._ The IM-SRG, MBPT and CC methods will be used to derive effective valence interactions for nuclear shell-model studies starting from underlying NN and NNN forces.  On the IM-SRG side, we will continue to work with collaborators Heiko Hergert (Ohio State), Achim Schwenk (Darmstadt) and Jason Holt (Darmstadt) to build upon the first successful   proof-of-principle calculations in   Ref. cite{tsukiyama2012}. Likewise, the work on effective   interactions from CC theory will be performed in close collaboration   with colleagues from Oak Ridge National Laboratory.    As one nears the limits of stability, traditional SM calculations in a single major shell are often insufficient. Moreover, for loosely-bound systems it is necessary to utilize a single-particle basis which accounts for resonances and the non-resonant continuum. Therefore, it is a high priority to develop an *ab initio* framework to derive multi-shell effective interactions with the proper inclusion of continuum degrees of freedom. In recent years, we have had success in working with the so-called Gamow basis in MBPT and coupled cluster calculations for nuclei near shell closures, see Ref. cite{Hagen2010b} and references therein. A major component of the current sub-project will be to implement the Gamow basis in CC and IM-SRG derivations of shell model effective interactions in large model spaces, extending previous work in Ref. cite{Tsukiyama2009}. This opens up the exciting possibility for *ab initio* shell model calculations of resonant states at the limits of stability.  We note that we have recently tested multi-shell effective interactions derived in MBPT for selected nuclei, see Ref. cite{mhj2013h}.    In standard FCI approaches, such large model spaces rapidly become computationally prohibitive due to the enormous matrix dimensions involved. To address this limitation, our recently developed FCIQMC code will be tailored to extended valence shell model spaces, making it possible to study nuclei close to the limits of stability. As a test case of both our *ab initio* derivations of multi-shell effective interactions and the FCIQMC code, we will look at the chain of fluorine isotopes where the last stable isotope is expected to be $^{31}$F, and for which there is currently much experimental interest. To study the full isotopic chain requires two major shells, the $sd$ and the $pf$ shells, and most likely also states represented by a Gamow basis. Since it is still possible to handle the two major shell diagonalization with standard shell model codes cite{caurier2005,dean2004}, this will allow for a clean benchmark of the FCIQMC code.  Once the FCIQMC code is validated, we will perform detailed comparisons of *ab initio* effective interactions derived from IM-SRG, CC, and MBPT formalisms.    An important long-term goal of this work is to use our microscopically derived SM effective interactions, together with the optimization scheme described in subsection ref{subsec:uncertainties} to construct optimized     effective interactions and operators for studies of various decay     properties. This sub-project meshes nicely with the     $0\nu\beta\beta$ program of our colleagues Profs. Alex Brown and     Vladimir Zelevinsky at the NSCL and Michigan State University and     Prof. Mihai Horoi at Central Michigan University. We expect     several fruitful synergies to result.  Studies of $\beta$-decay     and neutrino-less double $\beta$-decay are crucial for our     understanding of fundamental interactions in nuclei and more generally      physics beyond the Standard Model. We are optimistic that     our microscopic approaches to effective interactions and operators     can provide better starting points for shell-model studies of such     fundamental questions.
+
+  * _Microscopically-based energy density functionals for nuclei._  Our calculations of ground state properties with first principle methods like IM-SRG and CC theory will be used to provide microscopic guidance for the construction of improved energy density   functionals for nuclei. With precise first principle methods as our   starting point, we will employ the Lieb formulation of density   functional theory cite{lieb1983,teale2009} to define functionals   which can be compared with more phenomenological ones.  We will   follow to a large extent a recipe outlined in quantum chemistry,   using adiabatic-connection curves obtained from IM-SRG and CC   calculations for closed-shell nuclei like $^{16}$O and   $^{40}$Ca. The adiabatic-connection approach has been shown in   quantum chemistry to provide important insights into the link   between Kohn-Sham and first-principle approaches to the   exchange-correlation problem.
+
+
+
+
+
+
+
+
+
+=== *Ab initio* calculations of infinite matter} label{subsec:infinitematter ===
+
+Starting from optimized EFT Hamiltonians detailed in ref{subsec:uncertainties}, we will perform extensive studies of the equation of state of nucleonic matter, extracting
+constraints on the energy per particle in symmetric matter and
+$\beta$-stable matter, and obtaining reliable estimates for the
+symmetry energy.  The latter will link with the research of
+Danielewicz and Nunes at the NSCL, who seek to extract information on
+the symmetry energy from various nuclear reactions. We will focus on
+the following sub-projects:
+
+  * _Equation of state calculations using the IM-SRG method._ We will develop IM-SRG calculations of the EoS of nuclear matter starting from realistic NN and NNN interactions. Preliminary studies by Ph.D. student Titus Morris of the three-dimensional (3D) homogeneous
+electron gas and pure neutron matter with schematic interactions are in excellent agreement with quasi-exact AFDMC calculations. Upon implementation with realistic NN and NNN interactions, the IM-SRG results will be compared with our recent CC results, see Refs. cite{mhj2013g,mhj2013j}. High-precision and computationally cheap infinite matter calculations will likely lead to an improved 
+  optimization of the chiral forces (see subsection ref{subsec:uncertainties}) by including the EoS of nuclear matter in the optimization procedure. 
+  
+  * _Equation of state calculations using the FCIQMC method._  A complementary project will be to apply the recently developed FCIQMC approach to infinite nuclear matter. Based on the promising   results of Alavi and co-workers on atoms, molecules and the   homogeneous electron gas cite{alavi1,alavi2,alavi3,alavi4,alavi5},  we believe that this method can provide   quasi-exact benchmarks for the equation of state and other   quantities like the symmetry energy. Unlike conventional quantum Monte Carlo (QMC)   methods, the FCIQMC can handle both local and non-local forces,   making it an attractive method to study the (mostly) non-local   formulations of chiral EFT interactions.  We have, see also the   discussion in subsection ref{subsec:othersystems}, recently applied   this method to the two and three-dimensional electron gas. For these   systems there are several excellent theoretical benchmarks. We   reproduce the results of Alavi *et al* cite{alavi3} for the   three-dimensional electron gas and obtain a good agreement with   Ceperley and co-workers' results for the two-dimensional electron   gas.
+
+  * _Finite size corrections._ Since we simulate infinite matter in a periodic box for both the IM-SRG and FCIQMC methods, an important aspect will be to study and quantify finite size
+  errors. We propose to study the use of so-called twisted periodic
+  boundary conditions, which have been used with much success in
+  condensed matter calculations to minimize finite size
+  effects cite{mhj2013j,drummond2008}.  In depth studies of a proper treatment of finite size effects  will be included in both our IM-SRG and FCIQMC
+codes. 
+
+  * _Nuclear symmetry energy and transport properties._ The CC, IM-SRG, and the FCIQMC methods will be developed for asymmetric infinite matter to extract information about the symmetry
+  energy for infinite matter and its dependence on various components
+  of the underlying NN and NNN interactions. We will also extract the so-called Landau fermi liquid parameters, which are useful to parameterize the collision integral term in transport theory.  This will naturally complement the proposed reaction theory program of
+  Profs. Danielewicz and Nunes at the NSCL at Michigan State University to study the symmetry energy and transport properties of nucleonic matter. 
+  
+
+
+
+=== Optimized forces and estimation of theoretical uncertainties} label{subsec:uncertainties ===
+This part of our project deals with the development of improved
+optimization procedures for input NN and NNN interactions, and more
+generally with the development of more reliable theoretical error
+estimates in many-body calculations. This will demand a multi-faceted
+approach to study the interplay of uncertainties from various sources
+such as truncation errors of the input EFT used to derive nuclear
+forces, uncertainties in the optimized parameters of the input
+interactions, truncated renormalization group (RG) evolution to
+``soften'' the input Hamiltonian, basis-set truncation errors, and
+truncation errors in the particular level of many-body approximation.
+
+ 
+
+
+
+  * _Optimization of chiral EFT potentials._ We will continue our work on optimizing nuclear forces using the statistical software POUNDERS developed at Argonne national Laboratory.  The program laid out in Ref. cite{mhj2013e} will be extended to the optimization of both two- and three-body forces within effective field theory till next-to-next-to-next leading order N$^3$LO.  This will imply a proper statistical analysis that relates to the experimental cross sections, producing thereby a proper covariance and sensitivity analysis of the various low-energy constants (LEC) involved. The optimization protocol will be applied to the chiral forces order by order, from LO, via NLO, N$^2$LO to N$^3$LO.  This approach will allow us to study the convergence of the chiral EFT expansion in a many-body context, see subsections ref{subsec:finitenuclei} and ref{subsec:infinitematter}, and trace the impact of the statistical  uncertainties of various low-energy constants (LEC) on many-body observables.  We will also study important theoretical aspects including exploring cutoff dependence and the regulator dependence of the forces.  Taken together, all of these aspects will provide the basis for error quantifications of various many-body observables. Ultimately we will expand our protocol, which at present only utilizes two- and three-nucleon data in the optimization, to include data from selected closed-shell nuclei and infinite matter. This work will be done in collaboration with colleagues from Oak Ridge National Laboratory and the University of Tennessee, Knoxville, the University of Oslo, Chalmers University in Gothenburg and  Argonne National Laboratory.
+
+  * _Optimization of shell model interactions._ Our optimization procedure will also include a derivation of   effective interactions for FCI studies, which together with   experimental data for several nuclei in for example the $sd$ and   $pf$ shells can help in constraining effective interactions for   atomic nuclei.   Such an optimization program aims at providing error estimates  for effective interactions and operators to be used in large-scale shell-model calculations and will link most of the above issues, that is we aim at defining a research program where shell-model investigations are linked with (i) convergence studies of the chiral expansion used to derive the forces, (ii) the optimization program for the forces, (iii) studies of the regulator dependence and uncertainty in the low-energy constants, and (iv) uncertainties in many-body observables.    Figure ref{fig:research} illustrates the links   between the various topics outlined in this subsection and   subsections ref{subsec:finitenuclei} and   ref{subsec:infinitematter}. # original latex figure with width=0.7\textwidth,clip=
+
+FIGURE: [figs/research.png, width=400 frac=1.0] Sketch  of our optimization research program.} label{fig:research
+
+
+  * _Finite basis-set truncation errors._  We plan also to investigate the basis-set truncation errors that
+  result from the implicit infrared (IR) and ultraviolet (UV) cutoffs
+  in our many-body methods. Much progress has been made recently in
+  developing a mathematical justification for extrapolation schemes to
+  the infinite basis-set limit, particularly in the IR
+  regime cite{kvaal2009, dick}. We will incorporate these
+  extrapolation methods to quantify our basis-set truncation
+  errors. We will also use our capability to calculate a wide range of
+  nuclei with different input interactions to gain a better
+  understanding of UV extrapolations, which are dependent on the
+  details of the Hamiltonian and system, and are much less understood
+  than the IR extrapolations cite{dick}.
+
+  * _Many-body approximation errors._ We will also investigate truncation errors arising from   different levels of many-body approximation (e.g., CCSD versus   CCSD(T)). Unlike the studies of basis-set truncation errors, it is   difficult to obtain an analytic or semi-analytic understanding of   many-body approximation errors for realistic nuclear many-body   systems. Therefore, we will proceed in an empirical fashion by using   the capability of the FCIQMC method to generate quasi-exact results   for a range of input interactions and nuclear systems.  Using the   FCIQMC results as the exact benchmark, we will study how the   truncation errors of the IM-SRG (e.g., IM-SRG(2), IM-SRG(3), etc.),   coupled cluster theory (CCSD, CCSD(T), etc.), and many-body   perturbation theory correlate with various quantities that one   expects to affect convergence, such as the UV cutoff in the nuclear   Hamiltonian, the D-state probability in the deuteron, the wound   parameter calculated in leading-order Brueckner Hartree-Fock theory,   the size of the shell gap in the Hartree-Fock reference state,   etc. It is hoped that in this manner, we can at least gain ``rule of   thumb'' estimates of how accurate we expect a given level of CC or   IM-SRG calculation to be given some simple quantities that   characterize the input interactions and the reference state upon   which correlations are to be built.
+
+
+
+
+=== Applications to other systems} label{subsec:othersystems ===
+To further validate our many-body machinery, we will also carry out
+ground- and excited-state calculations using CC, IM-SRG, and FCIQMC
+for the following well-studied systems that can serve as interesting
+benchmarks for our methods:
+
+  * {\bf Homogenous electron gas (HEG) in two and three
+  dimensions.} The HEG has been studied
+  extensively in the literature, see for example the recent FCIQMC
+  calculations of Shepherd *et al* cite{alavi3,alavi4,alavi5}. We
+  have recently started to study the two-dimensional HEG using CC
+  theory, the FCIQMC method and IM-SRG, with very promising
+  results cite{baardsen2013}. These systems can serve as a testbed for the development of
+  reliable infinite nuclear matter calculations, as much
+  of the formalism is similar except that the nuclear forces have a
+  finite range compared with the Coulomb interaction. Since coulomb
+  interactions are simpler, studies of the HEG will allow us
+  to gain important insights about many-body correlations and various
+  approximations like CC theory with and without triples correlations,
+  IM-SRG(2) and IM-SRG(3) etc. In our IM-SRG, CC, and FCIQMC calculations to date, periodic boundary conditions have been used without including finite-size corrections cite{baardsen2013}. In order to compare the results to the benchmarks
+ from the Monte Carlo calculations of Ceperley *et al*, we will have to implement finite-size corrections in our formalism. Since we ultimately face the same issues in the nuclear matter problem, we believe that the conclusions and experiences we will gain from the HEG will be very useful.
+ 
+  * _Quantum dots and neutron drops._ We have also performed several benchmarks of quantum dots in two-dimensional parabolic traps cite{mhj2011c,reimann2013}. We have benchmarked CCSD and CCSDT theories and
+IM-SRG(2) with diffusion Monte Carlo calculations, obtaining results which agree rather well. The aim is to extend the studies of such systems open-shell configurations and double well quantum dots. Furthermore, as the problem is essentially identical to quantum dots, we will also perform calculations  of harmonically-trapped neutrons (``neutron drops''), which serve as useful theoretical ``data'' to constrain the construction of improved EDFs for nuclei cite{bogner2011b}.
+
+  * _Unitary fermi gas._  Another interesting testing ground for many-body theories is the unitary fermi gas cite{UFG}. The unitary fermi gas (UFG) is a many-fermion system interacting via short-range interactions tuned to infinite $s$-wave scattering length. Since the only length scale in the problem in the Fermi momentum, many properties of the UFG obey elegant universal relations that are independent of the details of the microscopic interactions. As a result, the physics of the UFG is relevant to a wide range of systems from trapped atomic gases to low-density neutron matter to the quark-gluon plasma cite{UFG}.  Despite the preponderance of elegant and simple universal relations, the UFG is very challenging to calculate from first principles since the problem is ``maximally non-perturbative'' due to the lack of a small parameter to expand in.  Over recent years, a large number of QMC and other non-perturbative calculations of the UFG have been accumulated. Therefore, an interesting and challenging problem will be to apply the IM-SRG, CC, and FCIQMC methods to this system and compare to other methods.
+
+
+# begin{figure}[hbtp]
+# \centering
+# \includegraphics[scale=0.8]{figs/2dimheg.pdf}
+# \caption{Results from Ref. cite{baardsen2013} for the two-dimensional HEG obtained with $N=10$ as function
+# of the number of single-particle orbitals and $r_s=1.0$.  We have employed  
+#  CC theory with doubles only (CCD), IM-SRG and FCIQMC. The results are compared with %benchmarks from the Monte Carlo (VMC) calculations.}
+#  label{fig:heg2dim}
+# \end{figure}
+
+=== Scientific library} label{subsec:library ===
+This initiative has also as one of its long-term aims to build a widely
+accessible software library that contains the developed physics
+software programs.  This will be an open-source
+software library for researchers and students worldwide, and will eventually come with
+user-friendly graphical user interfaces and documentation with a wide variety of benchmarks for different systems and input interactions.
+ 
+=== Broader Impacts ===
+
+The academic environment at MSU/NSCL provides numerous opportunities
+for the PIs to integrate their research program with teaching and
+mentoring bright young people who are considering pursuing a career in
+high-level research in nuclear physics. For example, the Nuclear
+Science group at the NSCL is very active in mentoring undergraduate
+students in the NSF sponsored Research Experience for Undergraduates
+(REU) program in the summer months. The PIs' research is ideally
+suited for the REU program, as many of the projects in this proposal
+can be tested in prototype toy-model problems that manage to
+simultaneously i) illustrate cutting-edge modern concepts (e.g.,
+renormalization group methods) to the student at a technical level
+appropriate for an undergraduate physics major, and ii) benefit the
+overall progress of the PIs' research program. In other words,
+potential interactions with REU students at the NSCL would be mutually
+beneficial.
+
+The PIs are requesting support for two graduate students plus one postdoc to work on
+the projects outlined above. The fields of physics that we will cover,
+are all at the forefront of basic research in many-body physics and
+low-energy nuclear physics.The many collaborations of the applicant
+group with academic institutions world wide provides an excellent
+platform for developing the communication skills of the supported
+students. Global collaboration, and collaboration within the local
+group, requires skills in project management in order to adequately
+communicate the progress of the project and to meet
+deadlines. Participation in international conferences and visits at
+research centers can be expected within the time period the proposed
+project. This will equip the involved participants with skills in
+presentation techniques.  Proper documentation, both internally and in
+peer-reviewed international journals, in writing is expected. The
+project is grounded in nuclear physics but there is a very large
+overlap with computational science and numerical analysis. These two
+complementary aspects will form a natural part of the everyday work
+and therefore add to the total competence of the
+participants. Naturally, this will add to the number of possible
+career paths.
+
